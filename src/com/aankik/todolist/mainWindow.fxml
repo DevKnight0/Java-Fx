@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aankik.todolist.Controller">
+    <top>
+        <VBox>
+            <MenuBar style="-fx-background-color: #575757;">
+                <Menu style="-fx-background-color: sandybrown;" text="File">
+                    <items>
+                        <MenuItem onAction="#showNewItemDialog" style="" text="New..." />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#handleExit" text="Exit" />
+                    </items>
+                </Menu>
+                <effect>
+                    <ColorAdjust />
+                </effect>
+            </MenuBar>
+
+            <ToolBar style="-fx-background-color: #575757;">
+                <HBox spacing="5">
+                    <Button onAction="#showNewItemDialog" style="-fx-background-color: white;">
+                        <tooltip>
+                            <Tooltip text="Add a New Todo Item" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/New16.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ToggleButton fx:id="filterToggleButton" onAction="#handleFilterButton" style="-fx-background-color: white;" text="Today's Items">
+                        <tooltip>
+                            <Tooltip text="Button Down: Show Today's items only. Button Up: Show all items" />
+                        </tooltip>
+                    </ToggleButton>
+                </HBox>
+            </ToolBar>
+
+        </VBox>
+    </top>
+    <left>
+        <!--   TO CREATE LEFT BORDER     -->
+        <!--        <ListView fx:id="todoListView" onMouseClicked="#handleClickedListView"   style="-fx-background-color: Black">-->
+
+        <!--        </ListView>-->
+        <ListView fx:id="todoListView" onKeyReleased="#handleKeyPressed" style="-fx-background-color: Black;">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <opaqueInsets>
+                <Insets left="60.0" right="60.0" />
+            </opaqueInsets></ListView>
+
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: #757575;">
+            <TextArea fx:id="itemDetails" editable="false" style="-fx-border-color: black; -fx-background-color: white; -fx-text-fill: black;" wrapText="true" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets bottom="50.0" left="20.0" />
+                </VBox.margin>
+            </TextArea>
+            <!--      to go more room to textarea      -->
+            <HBox>
+                <Label style="-fx-background-color: white;" text="Due: ">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+
+                <Label fx:id="deadline" style="-fx-background-color: Orange;">
+                    <font>
+                        <Font name="Times New Roman Bold" size="20" />
+                    </font>
+                </Label>
+                <!--            <Button fx:id="Speak" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Text to speak" BorderPane.alignment="CENTER_RIGHT" onAction="#toSpeech">-->
+                <!--               <HBox.margin>-->
+                <!--                  <Insets bottom="2.0" left="350.0" top="2.0" />-->
+                <!--               </HBox.margin></Button>-->
+            </HBox>
+        </VBox>
+    </center>
+
+
+</BorderPane>
