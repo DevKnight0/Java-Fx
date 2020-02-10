@@ -252,7 +252,7 @@ public class Controller  {
             }
             else {
                 System.out.println("else");
-                alert.setContentText("Enter Correct Date........");
+                alert.setContentText("Fields cannot be empty........");
             }
             alert.showAndWait();
             return;
