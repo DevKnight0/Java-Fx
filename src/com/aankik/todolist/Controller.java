@@ -331,6 +331,7 @@ public class Controller  {
     @FXML
     public void deleteListItem()
     {   TodoItem item= todoListView.getSelectionModel().getSelectedItem();
+         if(item!=null)
        deleteItem(item);
 
     }
@@ -393,6 +394,7 @@ public class Controller  {
     @FXML
     void editListItem()
     {   TodoItem item= todoListView.getSelectionModel().getSelectedItem();
+            if(item!=null)
        editItem(item);
     }
     @FXML
