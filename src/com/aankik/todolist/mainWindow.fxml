@@ -15,8 +15,13 @@
                     <items>
                         <MenuItem onAction="#showNewItemDialog" style="" text="New..." />
                         <SeparatorMenuItem />
+                        <MenuItem text="Edit Item" onAction="#editListItem" />
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Delete Item" onAction="#deleteListItem"/>
+                        <SeparatorMenuItem/>
                         <MenuItem onAction="#handleExit" text="Exit" />
                     </items>
+
                 </Menu>
                 <effect>
                     <ColorAdjust />

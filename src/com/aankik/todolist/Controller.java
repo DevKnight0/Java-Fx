@@ -324,6 +324,12 @@ public class Controller  {
         }
 
     }
+    @FXML
+    public void deleteListItem()
+    {   TodoItem item= todoListView.getSelectionModel().getSelectedItem();
+       deleteItem(item);
+
+    }
 
     public void editItem(TodoItem item)
     {
@@ -380,7 +386,11 @@ public class Controller  {
 
     }
 
-
+    @FXML
+    void editListItem()
+    {   TodoItem item= todoListView.getSelectionModel().getSelectedItem();
+       editItem(item);
+    }
     @FXML
     public void handleFilterButton() {
         TodoItem selectedItem = todoListView.getSelectionModel().getSelectedItem();
