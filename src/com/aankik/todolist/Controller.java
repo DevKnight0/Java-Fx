@@ -119,6 +119,10 @@ public class Controller  {
                     DateTimeFormatter df= DateTimeFormatter.ofPattern("MMMM d,yyyy");
                     deadline.setText(df.format(item.getDeadline()));
                 }
+                else{
+                    itemDetails.setText("");
+                    deadline.setText("");
+                }
 
             }
         });
