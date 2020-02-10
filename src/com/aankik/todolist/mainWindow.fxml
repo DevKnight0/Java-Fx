@@ -15,10 +15,10 @@
                     <items>
                         <MenuItem onAction="#showNewItemDialog" style="" text="New..." />
                         <SeparatorMenuItem />
-                        <MenuItem text="Edit Item" onAction="#editListItem" />
-                        <SeparatorMenuItem/>
-                        <MenuItem text="Delete Item" onAction="#deleteListItem"/>
-                        <SeparatorMenuItem/>
+                        <MenuItem onAction="#editListItem" text="Edit Item" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#deleteListItem" text="Delete Item" />
+                        <SeparatorMenuItem />
                         <MenuItem onAction="#handleExit" text="Exit" />
                     </items>
 
@@ -55,7 +55,7 @@
         <!--        <ListView fx:id="todoListView" onMouseClicked="#handleClickedListView"   style="-fx-background-color: Black">-->
 
         <!--        </ListView>-->
-        <ListView fx:id="todoListView" onKeyReleased="#handleKeyPressed" style="-fx-background-color: Black;">
+        <ListView fx:id="todoListView" onKeyReleased="#handleKeyPressed" style="-fx-background-color: white;">
             <BorderPane.margin>
                 <Insets />
             </BorderPane.margin>
